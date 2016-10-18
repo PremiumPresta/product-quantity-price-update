@@ -47,20 +47,20 @@ function getProductPriceWithQuantity() {
   }).fail(function (response) {
     console.error(response);
   });
-}
 
-function clientDebug(product_id, id_product_attribute, quantity) {
-  console.log('* CLIENT REQUEST:');
-  console.log('--------------------------------------------------');
-  console.log('product id = ' + product_id);
-  console.log('product combination id = ' + id_product_attribute);
-  console.log('quantity wanted = ' + quantity);
-  console.log('--------------------------------------------------');
-}
+  function clientDebug(product_id, id_product_attribute, quantity) {
+    console.log('* CLIENT REQUEST:');
+    console.log('--------------------------------------------------');
+    console.log('product id = ' + product_id);
+    console.log('product combination id = ' + id_product_attribute);
+    console.log('quantity wanted = ' + quantity);
+    console.log('--------------------------------------------------');
+  }
 
-function serverDebug(response) {
-  console.log('* SERVER RESPONSE:');
-  console.log('--------------------------------------------------');
-  console.log(response);
-  console.log('--------------------------------------------------');
+  function serverDebug(response) {
+    console.log('* SERVER RESPONSE:');
+    console.log('--------------------------------------------------');
+    console.log(response);
+    console.log('--------------------------------------------------');
+  }
 }
