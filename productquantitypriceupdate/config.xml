@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>productquantitypriceupdate</name>
+	<displayName><![CDATA[Product Quantity Price Update]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[On a product page, it instantly displays the price for a product when the quantity changes.]]></description>
+	<author><![CDATA[PremiumPresta]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[]]></confirmUninstall>
+	<is_configurable>0</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
