@@ -12,7 +12,7 @@ $(document).ready(function () {
   // Check for changes when clicking on colors and radio buttons
   $(document).on('click', '#color_to_pick_list a, .attribute_radio', function (e) {
     e.preventDefault();
-    findCombination(); // function from product.js -> required for setting the value of #idCombination before triggering change event
+    findCombination();
     $('#idCombination').trigger('change');
   });
 });
@@ -21,8 +21,6 @@ function getProductPriceWithQuantity() {
   var product_id = $('#buy_block').find('#product_page_product_id').val();
   var id_product_attribute = $('#buy_block').find('#idCombination').val();
   var quantity = $('#quantity_wanted').val();
-
-//  clientDebug(product_id, id_product_attribute, quantity);
 
   $.get(baseUri + '?rand=' + new Date().getTime(), {
     controller: 'productpricebyquantity',
@@ -34,7 +32,6 @@ function getProductPriceWithQuantity() {
     ajax: true,
     dataType: 'json'
   }).done(function (response) {
-//    serverDebug(response); // uncomment this line for debugging
     if (response.error) {
       console.error(response.error);
       return;
@@ -47,20 +44,4 @@ function getProductPriceWithQuantity() {
   }).fail(function (response) {
     console.error(response);
   });
-
-  function clientDebug(product_id, id_product_attribute, quantity) {
-    console.log('* CLIENT REQUEST:');
-    console.log('--------------------------------------------------');
-    console.log('product id = ' + product_id);
-    console.log('product combination id = ' + id_product_attribute);
-    console.log('quantity wanted = ' + quantity);
-    console.log('--------------------------------------------------');
-  }
-
-  function serverDebug(response) {
-    console.log('* SERVER RESPONSE:');
-    console.log('--------------------------------------------------');
-    console.log(response);
-    console.log('--------------------------------------------------');
-  }
 }

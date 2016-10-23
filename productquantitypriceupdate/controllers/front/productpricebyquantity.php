@@ -10,8 +10,6 @@ class ProductQuantityPriceUpdateProductPriceByQuantityModuleFrontController exte
   }
 
   public function initContent() {
-    parent::initContent();
-
     $product_id = (int) Tools::getValue('product_id');
     $id_product_attribute = (int) Tools::getValue('id_product_attribute');
     $quantity = (int) Tools::getValue('quantity');
