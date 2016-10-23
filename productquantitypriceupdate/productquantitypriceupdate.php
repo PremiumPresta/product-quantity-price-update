@@ -31,7 +31,6 @@ class ProductQuantityPriceUpdate extends Module {
     return parent::uninstall();
   }
 
-//    public function hookHeader() {
   public function hookActionFrontControllerSetMedia() {
     $pageName = $this->context->controller->php_self;
     if ($pageName == "product") {
